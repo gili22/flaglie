@@ -1,0 +1,964 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+
+
+
+
+
+
+body {
+    /* overflow: hidden;  */
+
+    background: url("sky.avif") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.overlay {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(23, 23, 23, 0.791);
+    backdrop-filter: blur(3px);
+}
+
+.hidden {
+    display: none;
+}
+
+.flg {
+    opacity: 0;
+}
+
+.ptsMsg {
+    position: absolute;
+    left: 995px;
+    top: 39px;
+    color: rgb(25, 152, 20);
+    font-size: xx-large;
+    text-shadow: 0px 0px 7px #ffffff;
+    opacity: 0;
+    z-index: 39;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.ptsMsg.fadeFX {
+    opacity: 1;
+}
+
+.frame {
+    position: absolute;
+    width: 1070px;
+    height: 640px;
+    box-shadow: 0px 5px 10px #303030;
+
+    z-index: -5;
+    left: 379px;
+    bottom: 205px;
+}
+
+.box {
+
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+
+
+
+
+.box.fade {
+
+
+    -webkit-transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -ms-transition: opacity 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out;
+    transition: opacity 2s ease-in-out;
+
+
+
+    opacity: 0;
+}
+
+.goodJob {
+    position: absolute;
+    left: 570px;
+    top: 150px;
+    color: white;
+    font-size: 60px;
+    z-index: 55;
+   
+
+    left: 480px;
+    bottom: 200px;
+    opacity: 0;
+    height: 100px;
+    background-color: #333333e1;
+    width: 850px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 20px;
+
+
+    -webkit-transition: opacity 0.6s ease-in-out;
+    -moz-transition: opacity 0.6s ease-in-out;
+    -ms-transition: opacity 0.6s ease-in-out;
+    -o-transition: opacity 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.goodJob.fade {
+    opacity: 1;
+}
+
+.flag {
+    position: absolute;
+    left: 454px;
+    bottom: 250px;
+    width: 920px;
+    height: 550px;
+    z-index: -2;
+}
+
+.yourLevel {
+    position: absolute;
+    color: #0057ab;
+    font-size: 30px;
+    left: 495px;
+    bottom: 837px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.yourPoints {
+    position: absolute;
+    color: #0057ab;
+    font-size: 30px;
+    left: 775px;
+    bottom: 837px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.yourAttempts {
+    position: absolute;
+    color: #0057ab;
+    font-size: 30px;
+    left: 1095px;
+    bottom: 837px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+
+
+
+.boxes {
+
+
+    position: absolute;
+    left: 453.5px;
+    bottom: 250px;
+    /* display: inline-grid;    */
+    /* grid-template-rows: auto auto auto auto auto auto; 
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto; */
+    display: inline-grid;  
+    /* grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr); */
+    grid-auto-flow: row; /*default value*/
+    width: 920px;
+    height: 551px; 
+}
+
+/* .mapBackground {
+    position: absolute;
+    left: 454px;
+    bottom: 300px;
+
+    max-width: 920px;
+    max-height: 651px;
+    overflow: hidden;
+    border: 1px solid #171717;
+    box-shadow: 0px 5px 10px #303030;
+} */
+
+
+
+
+
+
+.box {
+    background-color: rgb(43, 173, 225);
+   
+
+    padding: 45px;
+    text-align: center;
+    align-items: center;
+    max-width: 1000px;
+    max-height: 551px;
+    overflow: hidden;
+    border: 1px solid #171717;
+    box-shadow: 0px 5px 10px #303030;
+
+    /* border-top: 2px solid #013b71;
+    border-bottom: 2px solid #013b71;
+    border-left: 2px solid #013b71;
+    border-right: 2px solid #013b71; */
+
+}
+
+.lvlContainer {
+    position: absolute;
+    bottom: 855px;
+    left: 485px;
+    width: 180px;
+    z-index: -1;
+    height: 45px;
+    background-color: #fff;
+    border-radius: 20px;
+    border-bottom: 4px solid #d9d9d9;
+
+}
+
+.atmContainer {
+    position: absolute;
+    bottom: 855px;
+    left: 1080px;
+    width: 210px;
+    z-index: -1;
+    height: 45px;
+    background-color: #fff;
+    border-radius: 20px;
+    border-bottom: 4px solid #d9d9d9;
+
+}
+
+.extraContainer {
+    visibility: hidden;
+    position: absolute;
+    bottom: 855px;
+    left: 1080px;
+    width: 210px;
+    z-index: -1;
+    height: 45px;
+    background-color: #fff;
+    border-radius: 20px;
+    border-bottom: 4px solid #d9d9d9;
+
+}
+
+.ptsContainer {
+    position: absolute;
+    display: inline-block;
+    bottom: 855px;
+    left: 760px;
+    width: 230px;
+    z-index: -1;
+    height: 45px;
+    background-color: #fff;
+    border-radius: 20px;
+    border-bottom: 4px solid #d9d9d9;
+}
+
+.gameOver {
+    color: white;
+    position: absolute;
+    top: 436px;
+    left: 815px;
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    background: #0057ab;
+    border-radius: 10px;
+    border: 0px;
+    z-index: 59;
+
+}
+
+.twitter {
+
+    position: absolute;
+    bottom: 90px;
+    left: 20px;
+    width: 50px;
+    opacity: 0;
+    z-index: 98;
+}
+
+.faceBook {
+
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    
+    opacity: 0;
+}
+
+.header {
+    position: absolute;
+    left: 1580px;
+    top: 110px;
+    text-decoration-line: underline;
+}
+
+
+
+.divBackground {
+    position: absolute;
+    left: 1460px;
+    top: 121px;
+    width: 450px;
+    height: 630px;
+    z-index: -78;
+    border-radius: 20px;
+
+    background-color: rgba(58, 58, 58, 0.22);
+}
+
+
+
+
+.shareBtn {
+    position: absolute;
+    left: 870px;
+    top: 550px;
+    width: 90px;
+    height: 90px;
+    font-size: 20px;
+    background: green;
+    border-radius: 20px;
+    color: white;
+    transition: all 0.3s;
+    border: 0;
+    outline: 0;
+    border-bottom: 4px solid rgb(4, 83, 4);
+    cursor: pointer;
+    z-index: 57; 
+    transition: width 1s, height 0.8s;
+
+}
+
+
+.shareBtn:hover  {
+    color: #7b7b7b00;
+    background-color: green;
+    border-bottom: 4px solid rgb(4, 83, 4);
+
+    height: 220px;
+
+
+    
+
+    transform: scale(1.03);
+
+}
+
+
+.clipIcon {
+    position: absolute;
+    bottom: 150px;
+    left: 20px;
+    width: 50px;
+    
+    opacity: 1;
+    z-index: -27;
+
+}
+
+
+
+.shareBtn:hover .clipIcon {
+    opacity: 1;
+}
+
+.shareBtn:hover .clipIcon:hover {
+    opacity: 0.7;
+
+}
+.shareBtn:hover .twitter:hover {
+    opacity: 0.7;
+}
+.shareBtn:hover .faceBook:hover {
+    opacity: 0.7;
+}
+
+.shareBtn:hover .twitter {
+    opacity: 1;
+}
+
+.shareBtn:hover .icon {
+    opacity: 0;
+}
+
+.shareBtn:hover .faceBook {
+    opacity: 1;
+}
+
+.shareBtn:active {
+
+    transform: scale(0.98);
+
+}
+
+.icon {
+
+    width: 40px;
+}
+
+.btnBlock {
+    position: absolute;
+    bottom: 412px;
+    left: 870px;
+
+
+    width: 90px;
+    height: 62px;
+    z-index: 78;
+
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+
+
+.gameOverMessage {
+    position: absolute;
+    color: white;
+    font-size: 110px;
+    left: 600px;
+    bottom: 650px;
+    opacity: 0;
+    z-index: 56;
+
+    -webkit-transition: opacity 0.9s ease-in-out;
+    -moz-transition: opacity 0.9s ease-in-out;
+    -ms-transition: opacity 0.9s ease-in-out;
+    -o-transition: opacity 0.9s ease-in-out;
+    transition: opacity 0.9s ease-in-out;
+}
+
+.gameOverMessage.fade {
+    opacity: 1;
+}
+
+.finalScore {
+    position: absolute;
+    left: 750px;
+    bottom: 600px;
+
+    opacity: 0;
+    color: white;
+    font-size: 40px;
+    z-index: 56;
+
+    -webkit-transition: opacity 0.6s ease-in-out;
+    -moz-transition: opacity 0.6s ease-in-out;
+    -ms-transition: opacity 0.6s ease-in-out;
+    -o-transition: opacity 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.levelReached {
+    position: absolute;
+    left: 750px;
+    bottom: 540px;
+
+    opacity: 0;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    z-index: 56;
+
+    -webkit-transition: opacity 0.6s ease-in-out;
+    -moz-transition: opacity 0.6s ease-in-out;
+    -ms-transition: opacity 0.6s ease-in-out;
+    -o-transition: opacity 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.copyClipboard {
+    position: absolute;
+    background-color: #ffffffb5;
+    width: 310px;
+    left: 750px;
+    bottom: 70px;
+    font-weight: bolder;
+    opacity: 0;
+
+
+    height: 100px;
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    z-index: -11;
+
+    -webkit-transition: opacity 0.6s ease-in-out;
+    -moz-transition: opacity 0.6s ease-in-out;
+    -ms-transition: opacity 0.6s ease-in-out;
+    -o-transition: opacity 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.copyClipboard.fade {
+    z-index: 56;
+    opacity: 1;
+}
+
+.copyc {
+    position: absolute;
+    width: 50px;
+    left: 250px;
+    top: 25px;
+}
+
+
+
+.levelReached.fade {
+    opacity: 1;
+}
+
+.finalScore.fade {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+.gameOver:hover {
+    background: #095295;
+    color: #a3a3a3;
+    cursor: pointer;
+}
+
+.coverPts {
+    position: absolute;
+    opacity: 1;
+    width: 20px;
+    height: 10px;
+    background: #ffffff;
+
+    z-index: 4;
+    top: 90px;
+    left: 577px;
+}
+
+.wrongMessage {
+    position: relative;
+    font-size: 40px;
+    color: #fff;
+
+    left: 480px;
+    bottom: -100px;
+    opacity: 0;
+    background-color: #303030c9;
+    width: 850px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 20px;
+
+
+    z-index: 19;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+.wrongMessage.fade {
+    opacity: 1;
+}
+
+.button {
+    position: relative;
+    top: 770px;
+    left: 790px;
+    background-color: #fff;
+    border: 0;
+    outline: 0;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-family: monospace;
+    box-shadow: 0px 5px 10px #0057ab;
+    transition: all 0.3s;
+    cursor: pointer;
+    border-radius: 5px;
+    border-bottom: 4px solid #d9d9d9;
+}
+
+.button:hover {
+    box-shadow: 0px 15px 25px -5px #0057ab;
+    transform: scale(1.03);
+}
+
+.button:active {
+    box-shadow: 0px 4px 8px #0065c8;
+    transform: scale(0.98);
+}
+
+
+.info {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    
+    background-color: dodgerblue;
+    border: 0px solid white;
+    border-radius: 100px;
+    color: white;
+
+    transition: all 0.2s;
+    left: 780px;
+    top: -15px;
+    z-index: 137;
+}
+
+.x {
+    position: relative;
+    left: 1186px;
+    top: 55px;
+    z-index: 93;
+    width: 25px;
+    height: 25px;
+
+    border-radius: 100px;
+    border: 2px solid white;
+    background-color: #303030e6;
+    color: white;
+}
+
+.scoring {
+    position: relative;
+    left: 730px;
+    bottom: 260px;
+    z-index: 93;
+    text-decoration-line: underline;
+
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+}
+
+.x:hover {
+    background-color: white;
+    border: 2px solid rgb(0, 0, 0);
+    color: black;
+
+    cursor: pointer;
+}
+
+.howToPlay {
+    position: relative;
+
+    bottom: 730px;
+    left: 800px;
+    z-index: 94;
+    font-size: 50px;
+
+    text-decoration : double;
+    color: white;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.desc {
+    color: white;
+    /* padding: 30px; */
+    padding-top: 110px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+
+
+    background-color: #303030e6;
+
+    width: 510px;
+    text-align:left;
+    line-height: 31px;
+
+    position: relative;
+    left: 700px;
+    top: 10px;
+    font-size: 20px;
+    z-index: 92;
+    border-radius: 10px;
+    border: 2px solid white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+
+}
+
+
+
+
+.info:hover {
+    background-color: rgb(69, 162, 255);
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+
+
+@media (max-width: 490px) {
+
+    body {
+        overflow-y: hidden;
+        background: url("sky.avif") no-repeat; 
+        
+        background-size: 160%;
+    }
+
+    .info {
+        left: 50px;
+        top: 10px;
+    }
+
+    .desc {
+        left: 0px;
+        top: -50px;
+        width: 380px;
+        text-align: left;
+        line-height: 35px;
+        font-size: 18px;
+        padding-top: 90px;
+        height: 740px;
+        padding-right: 30px;
+        padding-left: 30px;
+
+    }
+
+    .howToPlay {
+        left: 75px;
+        bottom: 910px;
+        font-size: 40px;
+    }
+
+    .scoring {
+        left: 30px;
+        bottom: 360px;
+    }
+
+    .x {
+        top: 0px;
+        left: 348px;
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+        font-weight: 700;
+
+    }
+
+    .coverPts {
+        position: relative;
+        opacity: 1;
+        width: 18px;
+        height: 10px;
+        background: rgb(218, 218, 218);
+        z-index: 4;
+        top: 55px;
+        left: 109px;
+    }
+
+    .gameOverMessage {
+        left: 40px;
+        top: 120px;
+        font-size: 55px;
+    }
+
+    .overlay {
+        width: 110%;
+        height: 110%;
+    }
+
+    .btnBlock {
+        left: 150px;
+        top: 335px;
+        height: 65px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .gameOver {
+        left: 95px;
+        top: 285px;
+    }
+
+    .shareBtn {
+        left: 150px;
+        top: 400px;
+
+    }
+
+    .copyClipboard {
+        left: 40px;
+        bottom: 100px;
+    }
+    
+    .goodJob {
+        opacity: 0;
+        font-size: 28px;
+        width: 300px;
+        text-align: center;
+
+        left: 45px;
+        top: 300px;
+        padding: 20px;
+    }
+
+    .frame {
+        position: relative;
+
+        bottom: -80px;
+        width: 380px;
+        height: 230px;
+        left: -2.5px;
+    }
+
+    .flag {
+        position: relative;
+
+        left: 25px;
+        bottom: 140px;
+        width: 326px;
+        height: 200px;
+    }
+
+    .boxes {
+        left: 31.5px;
+        bottom: 308px;
+        width: 328px;
+        height: 200px;
+    }
+
+    .box {
+        padding: 15px;
+
+    }
+
+    .button {
+        position: relative;
+
+
+        left: 100px;
+        top: 570px;
+        left: 90px;
+        width: 190px;
+        height: 50px;
+        font-size: 1.4rem;
+        padding: 10px;
+        font-family: monospace;
+
+    }
+
+    .lvlContainer {
+        left: 20px;
+        height: 155px;
+        z-index: -10;
+        width: 350px;
+        top: 130px;
+    }
+
+    .yourLevel {
+        left: 50px;
+        top: 115px;
+        font-size: 25px;
+    }
+
+    .ptsContainer {
+        background: rgb(218, 218, 218);
+        height: 40px;
+
+        left: 30px;
+        width: 330px;
+        top: 135px;
+    }
+
+    .yourPoints {
+        
+        left: 50px;
+        top: 165px;
+        font-size: 25px;
+    }
+
+    .atmContainer {
+        background: rgb(218, 218, 218);
+        height: 40px;
+
+        left: 30px;
+        width: 330px;
+        top: 185px;
+    }
+
+    .extraContainer {
+        visibility: visible;
+        height: 40px;
+
+        left: 30px;
+        width: 330px;
+        top: 235px;
+        background: rgb(218, 218, 218);
+
+    }
+
+    .yourAttempts {
+        background: rgb(218, 218, 218);
+
+        top: 215px;
+        left: 50px;
+        font-size: 25px;
+
+    }
+
+    .ptsMsg {
+
+        top: 170px;
+        left: 250px;
+        font-size: 25px;
+
+    }
+
+    .wrongMessage {
+        opacity: 0;
+        font-size: 25px;
+        left: 10px;
+        top: 250px;
+        width: 350px;
+    }
+   
+/* 
+    .ptsContainer {
+        left: 10px;
+        width: 150px;
+        top: 80px;
+    }
+
+    .yourPoints {
+        left: 20px;
+        top: 72px;
+        font-size: 20px;
+    } */
+}

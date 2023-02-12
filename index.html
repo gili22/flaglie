@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="New.css">
+  <title>Flag Game</title>
+
+</head>
+
+<body>
+    
+    <button class="button">Reveal block</button>
+    <button class="gameOver hidden">Play Again</button>
+    
+    <button class="shareBtn hidden">Share
+      
+      <img class="icon" src="https://cdn-icons-png.flaticon.com/512/61/61020.png"></img>
+      <img class="faceBook" src="fcebok.png"></img>
+      <a id="atwitter" href="https://twitter.com/intent/tweet?text=Hello%20world" target="_blank">
+        <img class="twitter" src="twttr.png">
+      </a>
+      
+
+      <img src="https://cdn-icons-png.flaticon.com/512/455/455709.png" class="clipIcon">
+
+      
+
+    </button>
+
+    <h1 class="header hidden"> How to play</h1>
+    <div class="divBackground hidden"></div>
+
+    <button class="info">?</button>
+    
+    <div class="infoText">
+
+      <button class="x hidden">x</button>
+
+      <p class="desc hidden">
+
+        Begin by guessing the flag that is shown,
+        after each correct guess you will advance
+        1 level up, after the first level, some blocks
+        will appear on the screen according to the level
+        you are on. Click on the "reveal block" button 
+        to reveal 1 random block from the screen. Be aware,
+        the more blocks you reveal, the lower the Points
+        you will get.<br><br><br><br>
+  
+        Each correct guess = 200 points.<br><br>
+  
+        Additional points are measured by how many blocks are left on the screen.
+        
+        The higher the level you are on, the more Additional points you will get
+  
+  
+        <h2 class="scoring hidden">Scoring:</h2><br><br>
+  
+        
+  
+        <h2 class="howToPlay hidden">How to play</h2>
+
+      </p>
+
+    </div>
+
+
+    <div class="btnBlock"></div>
+
+
+    <div class="copyClipboard">
+      <h2>Copied to clipboard!</h2>
+      <img src="https://cdn-icons-png.flaticon.com/512/60/60990.png" class="copyc">
+    </div>
+
+    <h1 class="gameOverMessage">Game Over!</h1>
+    <h2 class="finalScore">Your Score: 5633</h2>
+    <h2 class="levelReached">Level Reached: 14</h2>
+    <h2 class="goodJob"></h2>
+
+    <h2 class="yourLevel">Level: &nbsp1</h2>
+    <h2 class="yourPoints">Points:</h2>
+    <h2 class="yourAttempts">Attempts: 3</h2>
+
+    <div class="coverPts"></div>
+    <div class="ptsContainer"></div>
+    <div class="lvlContainer"></div>
+    <div class="atmContainer"></div>
+    <div class="extraContainer"></div>
+
+
+    <h1 class="wrongMessage">Wrong guess! you have 2 attempts left!</h1>
+    <img src="https://cdn.pixabay.com/photo/2016/02/10/18/49/frame-1192320_960_720.png" class="frame"></img>
+    <h2 class="ptsMsg">+200</h2>
+    <div class="overlay hidden"></div>
+
+
+
+
+  <div class="boxes">
+
+  </div>
+
+
+  <img class="flag" src=""></img>
+
+  <form autocomplete="off" >
+    <div class="autocomplete" style="width:300px">
+      <input id="myInput" type="text" placeholder="Enter guess here">
+    </div>
+    <input type="submit" class="submitButton">
+  </form>
+  
+
+<!-- AUTOCOMPLETE INPUT FROM THE WEB -->
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font: 16px Arial;  
+  }
+  
+  /*the container must be positioned relative:*/
+  .autocomplete {
+    position: absolute;
+    display: inline-block;
+    top: 750px;
+    left: 710px
+  }
+  
+  input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+
+  }
+  
+  input[type=text] {
+    background-color: #f1f1f1;
+    width: 100%;
+    position: relative;
+    top: 120px;
+  }
+  
+  input[type=submit] {
+    position: absolute;
+    background-color: DodgerBlue;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    left: 1020px;
+    top: 869.5px;
+  }
+  
+  .autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+    top: 162px;
+  }
+  
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff; 
+    border-bottom: 1px solid #d4d4d4; 
+  }
+  
+  /*when hovering an item:*/
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9; 
+  }
+  
+  /*when navigating through the items using the arrow keys:*/
+  .autocomplete-active {
+    background-color: DodgerBlue !important; 
+    color: #ffffff; 
+  }
+
+  @media (max-width: 490px) {
+  
+    input[type=text] {
+
+      position: relative;
+      background-color: #e5e5e5;
+
+      left: -670px;
+      top: -45px;
+      width: 70%;
+
+    }
+
+    input[type=submit] {
+      position: relative;
+
+  
+      top: 25px;
+      left: 250px;
+
+    }
+
+    .autocomplete-items {
+      top: -2px;
+      left: -670px;
+      width: 210px;
+    }
+}
+  </style>
+
+  
+  
+  <!--Make sure the form has the autocomplete function switched off:-->
+  
+  
+  
+  <script src="index.js"></script>
+</body>
+</html>
+
