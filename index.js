@@ -8,7 +8,7 @@ const desc = document.querySelector('.desc');
 const scoring = document.querySelector('.scoring');
 const info = document.querySelector('.info');
 
-
+console.log('hey gili! hey world!');
 
 const submitButton = document.querySelector('.submitButton');
 const button = document.querySelector('.button');
