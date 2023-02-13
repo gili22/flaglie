@@ -405,7 +405,6 @@ input.addEventListener("keyup", function (e) {
 submitButton.addEventListener("click", function (e) {
   e.preventDefault();
 
-  info.textContent = 'hey';
 
   wholeInputFunction(e);
 
