@@ -852,6 +852,9 @@ body {
     }
 
     .boxes {
+        position: relative;
+
+
         left: 31.5px;
         bottom: 122px; /*308px*/
         width: 328px;
