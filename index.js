@@ -362,6 +362,7 @@ previousFlagIndexes.push(randomFlagIndex);
         wrongMessage.textContent=`Wrong guess! you have ${attemptedGuesses} attempt${attemptedGuesses > 1 ? 's' : ''} left!!!`
         wrongMessage.classList.toggle('fade');
 
+        input.blur();
         if(attemptedGuesses === 0) {
             console.log('GAME OVER');
             wrongMessage.textContent='';
