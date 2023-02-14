@@ -171,10 +171,9 @@ previousFlagIndexes.push(randomFlagIndex);
 
     const wholeInputFunction = function(event) {
 
-      displayLevel.textContent = event.pointerType === undefined;
       
 
-      if(event.pointerType === 'mouse' || event.pointerType === 'touch' ? input.value.toLowerCase() === srcs[randomFlagIndex].countryName : event.keyCode === 13 && input.value.toLowerCase() === srcs[randomFlagIndex].countryName) {
+      if(event.pointerType === 'mouse' || event.pointerType === undefined ? input.value.toLowerCase() === srcs[randomFlagIndex].countryName : event.keyCode === 13 && input.value.toLowerCase() === srcs[randomFlagIndex].countryName) {
         
 
 
@@ -354,7 +353,7 @@ previousFlagIndexes.push(randomFlagIndex);
         previousIds=[]
     }); 
 
-    } else if(event.pointerType === 'mouse' || event.pointerType === 'touch' ? input.value.toLowerCase() !== srcs[randomFlagIndex].countryName : event.keyCode === 13 && input.value.toLowerCase() !== srcs[randomFlagIndex].countryName ) {
+    } else if(event.pointerType === 'mouse' || event.pointerType === undefined ? input.value.toLowerCase() !== srcs[randomFlagIndex].countryName : event.keyCode === 13 && input.value.toLowerCase() !== srcs[randomFlagIndex].countryName ) {
         attemptedGuesses--;
 
 
