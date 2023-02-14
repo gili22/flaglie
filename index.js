@@ -171,11 +171,7 @@ previousFlagIndexes.push(randomFlagIndex);
 
     const wholeInputFunction = function(event) {
 
-      if(event.pointerType === 'touch') {
-        displayLevel.textContent = 'passed simple test';
-      }
-
-      displayLevel.textContent = 'hi';
+      displayLevel.textContent = event.pointerType === 'touch'
       
 
       if(event.pointerType === 'mouse' || event.pointerType === 'touch' ? input.value.toLowerCase() === srcs[randomFlagIndex].countryName : event.keyCode === 13 && input.value.toLowerCase() === srcs[randomFlagIndex].countryName) {
