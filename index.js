@@ -284,6 +284,7 @@ previousFlagIndexes.push(randomFlagIndex);
       
         submitButton.disabled = true;
         input.disabled = true;
+        input.blur();
 
 
         if(globalLevel === 20) {
