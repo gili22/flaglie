@@ -727,6 +727,8 @@ body {
 @media (max-width: 490px) {
 
     body {
+
+
         overflow-x: hidden;
         overflow-y: hidden;
 
