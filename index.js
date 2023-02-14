@@ -171,11 +171,13 @@ previousFlagIndexes.push(randomFlagIndex);
 
     const wholeInputFunction = function(event) {
 
+      console.log(event.pointerType);
 
       
 
       if(event.pointerType === 'mouse' || event.pointerType === 'touch' ? input.value.toLowerCase() === srcs[randomFlagIndex].countryName : event.keyCode === 13 && input.value.toLowerCase() === srcs[randomFlagIndex].countryName) {
         
+
         divelements = document.querySelectorAll("div.box");
         divBoxes = Array.from(divelements);
 
@@ -404,7 +406,7 @@ input.addEventListener("keyup", function (e) {
 });
 
 submitButton.addEventListener("click", function (e) {
-  e.preventDefault();
+  // e.preventDefault();
 
 
   wholeInputFunction(e);
