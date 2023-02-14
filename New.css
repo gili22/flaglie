@@ -879,12 +879,12 @@ body {
         height: 155px;
         z-index: -10;
         width: 350px;
-        top: 130px;
+        top: 100px;
     }
 
     .yourLevel {
         left: 50px;
-        top: 115px;
+        top: 85px;
         font-size: 25px;
     }
 
@@ -894,13 +894,13 @@ body {
 
         left: 30px;
         width: 330px;
-        top: 135px;
+        top: 105px;
     }
 
     .yourPoints {
         
         left: 50px;
-        top: 165px;
+        top: 135px;
         font-size: 25px;
     }
 
@@ -910,7 +910,7 @@ body {
 
         left: 30px;
         width: 330px;
-        top: 185px;
+        top: 155px;
     }
 
     .extraContainer {
@@ -919,7 +919,7 @@ body {
 
         left: 30px;
         width: 330px;
-        top: 235px;
+        top: 205px;
         background: rgb(218, 218, 218);
 
     }
@@ -927,7 +927,7 @@ body {
     .yourAttempts {
         background: rgb(218, 218, 218);
 
-        top: 215px;
+        top: 185px;
         left: 50px;
         font-size: 25px;
 
@@ -935,7 +935,7 @@ body {
 
     .ptsMsg {
 
-        top: 170px;
+        top: 140px;
         left: 250px;
         font-size: 25px;
 
