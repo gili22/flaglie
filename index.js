@@ -171,12 +171,13 @@ previousFlagIndexes.push(randomFlagIndex);
 
     const wholeInputFunction = function(event) {
 
-
+      if(event.pointerType === 'touch') {
+        displayLevel.textContent = 'passed simple test';
+      }
       
 
       if(event.pointerType === 'mouse' || event.pointerType === 'touch' ? input.value.toLowerCase() === srcs[randomFlagIndex].countryName : event.keyCode === 13 && input.value.toLowerCase() === srcs[randomFlagIndex].countryName) {
         
-        displayLevel.textContent = 'passed oneth';
 
 
         divelements = document.querySelectorAll("div.box");
@@ -358,7 +359,6 @@ previousFlagIndexes.push(randomFlagIndex);
     } else if(event.pointerType === 'mouse' || event.pointerType === 'touch' ? input.value.toLowerCase() !== srcs[randomFlagIndex].countryName : event.keyCode === 13 && input.value.toLowerCase() !== srcs[randomFlagIndex].countryName ) {
         attemptedGuesses--;
 
-        displayLevel.textContent = 'passed second';
 
 
         attemptedGuesses > 0 ? displayAttempts.textContent = `Attempts: ${attemptedGuesses}` : ''
