@@ -175,7 +175,7 @@ previousFlagIndexes.push(randomFlagIndex);
         displayLevel.textContent = 'passed simple test';
       }
 
-      displayLevel.textContent = event.pointerType
+      displayLevel.textContent = e.pointerType
       
 
       if(event.pointerType === 'mouse' || event.pointerType === 'touch' ? input.value.toLowerCase() === srcs[randomFlagIndex].countryName : event.keyCode === 13 && input.value.toLowerCase() === srcs[randomFlagIndex].countryName) {
