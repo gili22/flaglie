@@ -405,7 +405,7 @@ input.addEventListener("keyup", function (e) {
 
 });
 
-submitButton.addEventListener("touch", function (e) {
+submitButton.addEventListener("click", function (e) {
   e.preventDefault();
 
 
