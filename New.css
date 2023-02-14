@@ -846,7 +846,7 @@ body {
         position: relative;
 
         left: 25px;
-        bottom: 140px;
+        bottom: 345px;
         width: 326px;
         height: 200px;
     }
@@ -855,14 +855,14 @@ body {
         position: relative;
 
 
-        left: 31.5px;
-        bottom: 122px; /*308px*/
+        left: 24px;
+        bottom: 342px; /*308px*/
         width: 328px;
         height: 200px;
     }
 
     .box {
-        padding: 15px;
+        padding: 50px;
 
     }
 
