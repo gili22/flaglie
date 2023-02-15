@@ -505,7 +505,7 @@ body {
     border-radius: 10px;
     color: black;
     padding: 10px;
-    z-index: -11;
+    z-index: 178;
 
     -webkit-transition: opacity 0.6s ease-in-out;
     -moz-transition: opacity 0.6s ease-in-out;
