@@ -728,7 +728,7 @@ body {
 
 
         overflow-x: hidden;
-        overflow-y: hidden;
+        /* overflow-y: hidden; */
 
         background: url("sky.avif") no-repeat; 
         
