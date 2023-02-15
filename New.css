@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 
 
-
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
 
 
 
@@ -728,6 +734,8 @@ body {
         
         background-size: 160%;
     }
+
+   
 
     .info {
         left: 50px;
