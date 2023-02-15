@@ -9,7 +9,9 @@ html,body {
     overflow-x: hidden;
 }
 
-
+* {
+    box-sizing: border-box;
+}
 
 
 body {
@@ -644,6 +646,8 @@ body {
     background-color: #303030e6;
     color: white;
 }
+
+
 
 .scoring {
     position: relative;
