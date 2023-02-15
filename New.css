@@ -715,6 +715,9 @@ body {
 
 @media (max-width: 490px) {
 
+
+    
+
     body {
 
 
@@ -817,7 +820,7 @@ body {
     .frame {
         position: relative;
 
-        bottom: -80px;
+        bottom: -120px;
         width: 380px;
         height: 230px;
         left: -2.5px;
@@ -827,7 +830,7 @@ body {
         position: relative;
 
         left: 25px;
-        bottom: 140px;
+        bottom: 100px;
         width: 326px;
         height: 200px;
     }
@@ -836,7 +839,7 @@ body {
 
 
         left: 31.5px;
-        bottom: 122px; /*308px*/
+        bottom: 82px; /*308px*/
         width: 328px;
         height: 200px;
     }
@@ -851,7 +854,7 @@ body {
 
 
         left: 100px;
-        top: 570px;
+        top: 590px;
         left: 90px;
         width: 190px;
         height: 50px;
