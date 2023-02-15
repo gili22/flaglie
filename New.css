@@ -549,17 +549,6 @@ body {
     cursor: pointer;
 }
 
-.coverPts {
-    position: absolute;
-    opacity: 1;
-    width: 20px;
-    height: 10px;
-    background: #ffffff;
-
-    z-index: 4;
-    top: 90px;
-    left: 577px;
-}
 
 .wrongMessage {
     position: relative;
@@ -777,16 +766,7 @@ body {
 
     }
 
-    .coverPts {
-        position: relative;
-        opacity: 1;
-        width: 18px;
-        height: 10px;
-        background: rgb(218, 218, 218);
-        z-index: 4;
-        top: 55px;
-        left: 109px;
-    }
+    
 
     .gameOverMessage {
         left: 40px;

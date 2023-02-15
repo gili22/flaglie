@@ -71,7 +71,7 @@ const srcs = [
     {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/1920px-Flag_of_Estonia.svg.png', countryName: 'estonia'},
     {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Georgia.svg/1920px-Flag_of_Georgia.svg.png', countryName: 'georgia'},
     {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Haiti.svg/1920px-Flag_of_Haiti.svg.png', countryName: 'haiti'},
-    {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flag_of_Iraq.svg/1920px-Flag_of_Iraq.svg.png', countryName: 'iraq'},
+    {urFl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flag_of_Iraq.svg/1920px-Flag_of_Iraq.svg.png', countryName: 'iraq'},
     {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/1920px-Flag_of_Kazakhstan.svg.png', countryName: 'kazakhstan'},
     {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Flag_of_Lebanon.svg/1920px-Flag_of_Lebanon.svg.png', countryName: 'lebanon'},
     {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/1920px-Flag_of_Mexico.svg.png', countryName: 'mexico'},
@@ -340,7 +340,7 @@ previousFlagIndexes.push(randomFlagIndex);
         // var text = document.createTextNode(globalLevel + 1);
 
 
-        displayLevel.textContent = `Level: ${'_'}${globalLevel + 1}`
+        displayLevel.textContent = `Level: ${globalLevel + 1}`
         displayAttempts.textContent = `Attempts: ${attemptedGuesses}`
       
 
