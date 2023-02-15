@@ -724,10 +724,10 @@ body {
 
     html, body {
         overflow-x: hidden;
-      }
+    }
       body {
         position: relative
-      }
+    }
     
 
     body {
@@ -851,8 +851,8 @@ body {
     .boxes {
 
 
-        left: 31.5px;
-        bottom: 108px; /*308px*/
+        left: 25px;
+        bottom: 102px; /*308px*/
         width: 328px;
         height: 200px;
     }
