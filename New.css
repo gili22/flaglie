@@ -855,11 +855,11 @@ body {
     }
 
     .boxes {
-        position: absolute;
+        position: fixed;
 
 
         left: 25px;
-        bottom: 17.5%; /*308px*/ /*116px*/
+        bottom: 116px;
         width: 328px;
         height: 200px;
     }
