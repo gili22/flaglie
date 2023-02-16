@@ -727,7 +727,7 @@ body {
 @media only screen and (max-device-width: 768px) {
 
 
-    html, body {
+    body {
         overflow-x: hidden;
     }
     body {
@@ -902,6 +902,9 @@ body {
         height: 50px;
         font-size: 1.4rem;
         padding: 10px;
+
+        /* margin-top: 50px; */
+
         font-family: monospace;
         touch-action: manipulation;
     }

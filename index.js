@@ -102,6 +102,7 @@ let isActive = true;
 
 // resizeOps();
 // window.addEventListener("resize", resizeOps);
+
     
 
 
