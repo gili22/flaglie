@@ -751,6 +751,8 @@ body {
         background: url("sky.avif") no-repeat; 
         
         background-size: 180%;
+        background-attachment: fixed;
+
         
         height: 700px;
     }
@@ -768,24 +770,29 @@ body {
         top: -50px;
         width: 380px;
         text-align: left;
-        line-height: 35px;
+        line-height: 31.5px;
         font-size: 18px;
-        padding-top: 90px;
+        padding-top: 70px;
         height: 740px;
         padding-right: 30px;
         padding-left: 30px;
+        padding-bottom: 90px;
+
+        border-radius: 15px;
+
+        color: rgb(215, 215, 215);
 
     }
 
     .howToPlay {
         left: 75px;
-        bottom: 910px;
+        bottom: 920px;
         font-size: 40px;
     }
 
     .scoring {
         left: 30px;
-        bottom: 360px;
+        bottom: 420px;
     }
 
     .x {

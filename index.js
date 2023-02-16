@@ -108,7 +108,7 @@ let isActive = true;
 
 let previousFlagIndexes = [];
 
-let globalLevel = 18;
+let globalLevel = 0;
 // for(let i = 0; i < levels[globalLevel].blockNum; i++) {
 //     let html = `<div class="box${i} box" id="${i}"></div>`
 //     boxes.insertAdjacentHTML('beforeend', html);   
