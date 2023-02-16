@@ -727,7 +727,9 @@ body {
 @media only screen and (max-device-width: 768px) {
 
 
-    
+    html, body {
+        overflow-x: hidden;
+    }
     body {
         position: relative
     }
@@ -736,7 +738,7 @@ body {
     body {
 
 
-        overflow-y: hidden;
+        /* overflow-y: hidden; */
 
         background: url("sky.avif") no-repeat; 
         
