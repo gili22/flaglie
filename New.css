@@ -729,8 +729,6 @@ body {
 
     html, body {
         overflow-x: hidden;
-        overflow-y: hidden;
-
     }
     body {
         position: relative
@@ -740,10 +738,11 @@ body {
     body {
 
 
+        overflow-y: hidden;
 
         background: url("sky.avif") no-repeat; 
         
-        background-size: 160%;
+        background-size: 180%;
     }
 
    
