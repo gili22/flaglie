@@ -727,12 +727,12 @@ body {
 @media only screen and (max-device-width: 768px) {
 
 
-    /* html, body {
+    html, body {
         overflow-x: hidden;
     }
     body {
         position: relative
-    } */
+    }
     
 
     body {
@@ -842,7 +842,7 @@ body {
         bottom: -120px;
         width: 380px;
         height: 230px;
-        left: -2.5px;
+        left: 5px;
     }
 
     /* .flag {
@@ -857,7 +857,7 @@ body {
     .allFBF {
         position: relative;
         top: 585px;
-        left: -430px;
+        left: -422px;
 
     }
 
