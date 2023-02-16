@@ -742,7 +742,9 @@ body {
 
         background: url("sky.avif") no-repeat; 
         
-        background-size: 80%;
+        background-size: 180%;
+        
+        height: 900px;
     }
 
    
