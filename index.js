@@ -26,7 +26,7 @@ const goodJob = document.querySelector('.goodJob');
 const twitter = document.querySelector('.twitter');
 const aTwitter = document.getElementById('atwitter');
 const btnCopyToClipboard = document.querySelector('.clipIcon');
-
+const gameFinishedMsg = document.querySelector('.gameFinishedMsg');
 
 const wrongMessage = document.querySelector('.wrongMessage');
 const pointsMessage = document.querySelector('.ptsMsg')
@@ -71,7 +71,7 @@ const srcs = [
     {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/1920px-Flag_of_Estonia.svg.png', countryName: 'estonia'},
     {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Georgia.svg/1920px-Flag_of_Georgia.svg.png', countryName: 'georgia'},
     {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Haiti.svg/1920px-Flag_of_Haiti.svg.png', countryName: 'haiti'},
-    {urFl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flag_of_Iraq.svg/1920px-Flag_of_Iraq.svg.png', countryName: 'iraq'},
+    {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flag_of_Iraq.svg/1920px-Flag_of_Iraq.svg.png', countryName: 'iraq'},
     {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/1920px-Flag_of_Kazakhstan.svg.png', countryName: 'kazakhstan'},
     {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Flag_of_Lebanon.svg/1920px-Flag_of_Lebanon.svg.png', countryName: 'lebanon'},
     {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/1920px-Flag_of_Mexico.svg.png', countryName: 'mexico'},
@@ -108,7 +108,7 @@ let isActive = true;
 
 let previousFlagIndexes = [];
 
-let globalLevel = 0;
+let globalLevel = 18;
 // for(let i = 0; i < levels[globalLevel].blockNum; i++) {
 //     let html = `<div class="box${i} box" id="${i}"></div>`
 //     boxes.insertAdjacentHTML('beforeend', html);   
@@ -122,7 +122,6 @@ displayPoints.textContent = `Points: ${points}`
 
 let randomFlagIndex = Math.floor(Math.random() * srcs.length);
 
-let colors = ['red', 'magenta', 'brown', 'blue', 'lime', 'green', 'pink']
 
 flag.src=srcs[randomFlagIndex].url;
 previousFlagIndexes.push(randomFlagIndex);
@@ -132,12 +131,14 @@ previousFlagIndexes.push(randomFlagIndex);
 
         randomFlagIndex = Math.floor(Math.random() * srcs.length);
 
+
         while(previousFlagIndexes.includes(randomFlagIndex) === true) {
             randomFlagIndex = Math.floor(Math.random() * srcs.length);
         }
 
         previousFlagIndexes.push(randomFlagIndex);
-        // console.log(srcs[randomFlagIndex].countryName);
+
+        console.log(previousFlagIndexes, randomFlagIndex);
 
         flag.src=srcs[randomFlagIndex].url;
     
@@ -296,13 +297,15 @@ previousFlagIndexes.push(randomFlagIndex);
         if(globalLevel === 20) {
 
 
-
             console.log('GAME OVER');
             wrongMessage.textContent='';
 
             displayAttempts.textContent = `Attempts: 0`;
             blurOverlay.classList.toggle('hidden');
         
+            gameFinishedMsg.textContent='Great Job! you finished the game! 👏🎉'
+            gameFinishedMsg.classList.toggle('fade');
+
             gameOverMessage.textContent = 'Great Job! you finished the game! 👏🎉'
             gameOverMessage.style.fontSize = '50px';
             gameOverMessage.style.bottom = '700px'
@@ -467,6 +470,7 @@ button.addEventListener('click', function() {
 gameOverBtn.addEventListener('click', function() {
     
     submitButton.form.submit();
+    gameFinishedMsg.classList.toggle('fade')
 
     blurOverlay.classList.toggle('hidden');
     gameOverBtn.classList.toggle('hidden');
