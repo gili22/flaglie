@@ -727,9 +727,7 @@ body {
 @media only screen and (max-device-width: 768px) {
 
 
-    body {
-        overflow-x: hidden;
-    }
+    
     body {
         position: relative
     }
