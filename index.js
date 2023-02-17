@@ -7,6 +7,7 @@ const howToPlay = document.querySelector('.howToPlay');
 const desc = document.querySelector('.desc');
 const scoring = document.querySelector('.scoring');
 const info = document.querySelector('.info');
+const theCorrectGuessWas = document.querySelector('.theCorrectGuessWas');
 
 console.log('hey gili! hey world!');
 
@@ -377,7 +378,8 @@ previousFlagIndexes.push(randomFlagIndex);
             console.log('GAME OVER');
             wrongMessage.textContent='';
             wrongMessage.classList.toggle('hidden');
-            
+            theCorrectGuessWas.innerHTML = `The correct flag was <br>${srcs[randomFlagIndex].countryName.charAt(0).toUpperCase() + srcs[randomFlagIndex].countryName.slice(1)}`
+            theCorrectGuessWas.classList.toggle('fade');
 
 
             displayAttempts.textContent = `Attempts: 0`;
@@ -471,6 +473,7 @@ gameOverBtn.addEventListener('click', function() {
     
     submitButton.form.submit();
     gameFinishedMsg.classList.toggle('fade')
+    theCorrectGuessWas.classList.toggle('fade');
 
     blurOverlay.classList.toggle('hidden');
     gameOverBtn.classList.toggle('hidden');
