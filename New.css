@@ -23,7 +23,7 @@ html,body {
 body {
     position: relative;
 
-    background: url("https://images.unsplash.com/photo-1667150574772-ba4d65676491?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80") center center fixed; 
+    background: url("gameWallpaper.avif") center center fixed; 
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -810,7 +810,7 @@ body {
 
         overflow-y: hidden;
 
-        background: url("https://images.unsplash.com/photo-1667150574772-ba4d65676491?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80");
+        background: url("gameWallpaper.avif");
         background-repeat: no-repeat; 
         
         
