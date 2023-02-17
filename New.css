@@ -7,18 +7,24 @@ html,body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+
+    background-attachment: absolute;
+    background-size: 100%;
+
 }
 
 * {
     box-sizing: border-box;
+    
 }
 
 
 
 body {
-    /* overflow: hidden;  */
+    position: relative;
 
-    background: url("sky.avif") no-repeat center center fixed; 
+    background: url("https://images.unsplash.com/photo-1540851665831-23e604485a5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80") center center fixed; 
+    background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -746,7 +752,6 @@ body {
     left: -50px;
     top: 60px;
     font-size: 30px;
-    text-decoration: underline;
 
     -webkit-transition: opacity 0.3s ease-in-out;
     -moz-transition: opacity 0.3s ease-in-out;
@@ -768,6 +773,9 @@ body {
 
     html, body {
         overflow-x: hidden;
+
+        background-size: 180%;
+        background-attachment: fixed;
     }
     body {
         position: relative
@@ -779,11 +787,10 @@ body {
 
         overflow-y: hidden;
 
-        background: url("sky.avif") no-repeat; 
+        background: url("sky.avif");
+        background-repeat: no-repeat; 
         
-        background-size: 180%;
-        background-attachment: fixed;
-
+        
         
         height: 700px;
 
