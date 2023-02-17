@@ -8,6 +8,7 @@ const desc = document.querySelector('.desc');
 const scoring = document.querySelector('.scoring');
 const info = document.querySelector('.info');
 const theCorrectGuessWas = document.querySelector('.theCorrectGuessWas');
+const textLogo = document.querySelector('.textLogo');
 
 console.log('hey gili! hey world!');
 
@@ -31,6 +32,7 @@ const gameFinishedMsg = document.querySelector('.gameFinishedMsg');
 
 const wrongMessage = document.querySelector('.wrongMessage');
 const pointsMessage = document.querySelector('.ptsMsg')
+
 
 
 const levels = [
@@ -91,7 +93,20 @@ const srcs = [
     {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/1280px-Flag_of_Norway.svg.png', countryName: 'norway'},
     {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bandera_de_Espa%C3%B1a.svg/1920px-Bandera_de_Espa%C3%B1a.svg.png', countryName: 'spain'},
     {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/1920px-Flag_of_Thailand.svg.png', countryName: 'thailand'},
-];
+    {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/1920px-Flag_of_Vietnam.svg.png', countryName: 'vietnam'},
+    {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1920px-Flag_of_the_Netherlands.svg.png', countryName: 'netherlands'},
+    {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/1920px-Flag_of_Belarus.svg.png', countryName: 'belarus'},
+    {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Bulgaria.svg/1920px-Flag_of_Bulgaria.svg.png', countryName: 'bulgaria'},
+    {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/1920px-Flag_of_Uruguay.svg.png', countryName: 'uruguay'},
+    {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/1920px-Flag_of_Latvia.svg.png', countryName: 'latvia'},
+    {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Cyprus.svg/1920px-Flag_of_Cyprus.svg.png', countryName: 'cyprus'},
+    {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/1920px-Flag_of_Singapore.svg.png', countryName: 'singapore'},
+    {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/1920px-Flag_of_Azerbaijan.svg.png', countryName: 'azerbaijan'},
+    {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Flag_of_Cuba.svg/1920px-Flag_of_Cuba.svg.png', countryName: 'cuba'},
+
+
+
+  ];
 let previousIds = [];
 
 let isActive = true;
