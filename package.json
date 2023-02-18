@@ -1,0 +1,16 @@
+{
+  "name": "flaggame",
+  "version": "1.0.0",
+  "description": "Game about learning flags",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gili Zinger",
+  "license": "ISC",
+  "dependencies": {
+    "git": "^0.1.5",
+    "node": "^19.4.0"
+  }
+}
