@@ -158,7 +158,7 @@ previousFlagIndexes.push(randomFlagIndex);
 
         previousFlagIndexes.push(randomFlagIndex);
 
-
+0
         flag.src=srcs[randomFlagIndex].url;
     
     }
@@ -380,7 +380,7 @@ previousFlagIndexes.push(randomFlagIndex);
         previousIds=[]
     }); 
 
-    } else if(enterEvent && input.value.toLowerCase() !== srcs[randomFlagIndex].countryName) {
+    } else if(enterEvent && input.value.toLowerCase() !== srcs[randomFlagIndex].countryName && input.value.length > 0) {
         attemptedGuesses--;
 
 
@@ -422,8 +422,15 @@ previousFlagIndexes.push(randomFlagIndex);
         delay(2000).then(() => wrongMessage.classList.toggle('fade'));
 
 
+    } else if(enterEvent && input.value === '') {
+
+      wrongMessage.textContent = 'Please enter a country!'
+      wrongMessage.classList.toggle('fade');
+
+      delay(2000).then(() => wrongMessage.classList.toggle('fade'));
     }
-    }
+  
+  }
 
 
 
@@ -521,7 +528,7 @@ gameOverBtn.addEventListener('click', function() {
 twitter.addEventListener('mouseover', function() {
 
   
-  aTwitter.href = `https://twitter.com/intent/tweet?text=Level:%20${globalLevel+1},%20Points:%20${points},%20play%20flagle%20at%20www.flagle.com`;
+  aTwitter.href = `https://twitter.com/intent/tweet?text=Level:%20${globalLevel+1},%20Points:%20${points},%20play%20flagle%20at%20www.flaglie.com`;
 
 });
 

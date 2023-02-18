@@ -822,7 +822,7 @@ body {
    
 
     .info {
-        left: 50px;
+        left: 80px;
         top: 10px;
         padding-left: 14px;
     }
@@ -968,7 +968,7 @@ body {
     .frame {
         position: relative;
 
-        bottom: -120px;
+        bottom: -220px;
         width: 380px;
         height: 230px;
         left: 5px;
@@ -985,7 +985,7 @@ body {
 
     .allFBF {
         position: relative;
-        top: 585px;
+        top: 685px;
         left: -422px;
 
     }
@@ -1106,11 +1106,14 @@ body {
     }
 
     .wrongMessage {
+        position: absolute;
+
         opacity: 0;
         font-size: 25px;
         left: 10px;
-        top: 250px;
+        top: 350px;
         width: 350px;
+        height: 90px;
     }
    
 /* 
