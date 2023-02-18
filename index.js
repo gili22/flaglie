@@ -10,8 +10,6 @@ const info = document.querySelector('.info');
 const theCorrectGuessWas = document.querySelector('.theCorrectGuessWas');
 const textLogo = document.querySelector('.textLogo');
 
-console.log('hey gili! hey world!');
-
 const submitButton = document.querySelector('.submitButton');
 const button = document.querySelector('.button');
 const displayLevel = document.querySelector('.yourLevel');
@@ -103,6 +101,12 @@ const srcs = [
     {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/1920px-Flag_of_Singapore.svg.png', countryName: 'singapore'},
     {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/1920px-Flag_of_Azerbaijan.svg.png', countryName: 'azerbaijan'},
     {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Flag_of_Cuba.svg/1920px-Flag_of_Cuba.svg.png', countryName: 'cuba'},
+    {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/1920px-Flag_of_Saudi_Arabia.svg.png', countryName: 'saudi arabia'},
+    {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/1920px-Flag_of_Nigeria.svg.png', countryName: 'nigeria'},
+    {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/1920px-Flag_of_Malaysia.svg.png', countryName: 'malaysia'},
+    {url: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1920px-Flag_of_Germany.svg.png', countryName: 'germany'},
+    {url: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1280px-Flag_of_Brazil.svg.png', countryName: 'brazil'},
+
 
 
 
@@ -154,7 +158,6 @@ previousFlagIndexes.push(randomFlagIndex);
 
         previousFlagIndexes.push(randomFlagIndex);
 
-        console.log(previousFlagIndexes, randomFlagIndex);
 
         flag.src=srcs[randomFlagIndex].url;
     
@@ -192,10 +195,10 @@ previousFlagIndexes.push(randomFlagIndex);
 
 
 
-    const wholeInputFunction = function(event) {
+    const wholeInputFunction = function(event, enterEvent) {
 
 
-      if(event.pointerType === 'mouse' || event.pointerType === undefined && event.type === 'click' ? input.value.toLowerCase() === srcs[randomFlagIndex].countryName : event.keyCode === 13 && input.value.toLowerCase() === srcs[randomFlagIndex].countryName) {
+      if(enterEvent && input.value.toLowerCase() === srcs[randomFlagIndex].countryName) {
         
 
 
@@ -377,7 +380,7 @@ previousFlagIndexes.push(randomFlagIndex);
         previousIds=[]
     }); 
 
-    } else if(event.pointerType === 'mouse' || event.pointerType === undefined && event.type === 'click' ? input.value.toLowerCase() !== srcs[randomFlagIndex].countryName : event.keyCode === 13 && input.value.toLowerCase() !== srcs[randomFlagIndex].countryName ) {
+    } else if(enterEvent && input.value.toLowerCase() !== srcs[randomFlagIndex].countryName) {
         attemptedGuesses--;
 
 
@@ -428,14 +431,14 @@ input.addEventListener("keyup", function (e) {
   
 
 
-  wholeInputFunction(e);
+  wholeInputFunction(e, e.keyCode === 13);
 
 });
 
 submitButton.addEventListener("click", function (e) {
   e.preventDefault();
 
-  wholeInputFunction(e);
+  wholeInputFunction(e, 1===1);
 
 });
 
