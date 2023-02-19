@@ -73,8 +73,8 @@ body {
 
 .frame {
     position: absolute;
-    width: 1070px;
-    height: 640px;
+    width: 1030px;
+    height: 600px;
     box-shadow: 0px 5px 10px #303030;
 
     z-index: -5;
@@ -113,14 +113,14 @@ body {
 .goodJob {
     position: absolute;
     left: 570px;
-    top: 150px;
+    top: 200px;
     color: white;
     font-size: 60px;
     z-index: 55;
    
 
     left: 480px;
-    bottom: 200px;
+    /* bottom: 200px; */
     opacity: 0;
     height: 100px;
     background-color: #333333e1;
@@ -143,10 +143,10 @@ body {
 
 .flag {
     position: absolute;
-    left: 454px;
-    bottom: 250px;
-    width: 920px;
-    height: 550px;
+    left: 450px;
+    bottom: 247px;
+    width: 887px;
+    height: 516px;
     z-index: -2;
 }
 
@@ -155,7 +155,7 @@ body {
     color: #0057ab;
     font-size: 30px;
     left: 495px;
-    bottom: 837px;
+    bottom: 802px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
@@ -165,7 +165,7 @@ body {
     color: #0057ab;
     font-size: 30px;
     left: 775px;
-    bottom: 837px;
+    bottom: 802px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
@@ -175,7 +175,7 @@ body {
     color: #0057ab;
     font-size: 30px;
     left: 1095px;
-    bottom: 837px;
+    bottom: 802px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
@@ -187,8 +187,8 @@ body {
 
 
     position: absolute;
-    left: 453.5px;
-    bottom: 250px;
+    left: 450px;
+    bottom: 247px;
     /* display: inline-grid;    */
     /* grid-template-rows: auto auto auto auto auto auto; 
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto; */
@@ -196,8 +196,8 @@ body {
     /* grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr); */
     grid-auto-flow: row; /*default value*/
-    width: 920px;
-    height: 551px; 
+    width: 887px;
+    height: 516px;
 }
 
 /* .mapBackground {
@@ -239,7 +239,7 @@ body {
 
 .lvlContainer {
     position: absolute;
-    bottom: 855px;
+    bottom: 820px;
     left: 485px;
     width: 180px;
     z-index: -1;
@@ -252,7 +252,7 @@ body {
 
 .atmContainer {
     position: absolute;
-    bottom: 855px;
+    bottom: 820px;
     left: 1080px;
     width: 210px;
     z-index: -1;
@@ -266,7 +266,7 @@ body {
 .extraContainer {
     visibility: hidden;
     position: absolute;
-    bottom: 855px;
+    bottom: 820px;
     left: 1080px;
     width: 210px;
     z-index: -1;
@@ -280,7 +280,7 @@ body {
 .ptsContainer {
     position: absolute;
     display: inline-block;
-    bottom: 855px;
+    bottom: 820px;
     left: 760px;
     width: 230px;
     z-index: -1;
@@ -577,7 +577,7 @@ body {
     color: #fff;
 
     left: 480px;
-    bottom: -100px;
+    bottom: -150px;
     opacity: 0;
     background-color: #303030c9;
     width: 850px;
@@ -961,7 +961,7 @@ body {
         text-align: center;
 
         left: 45px;
-        top: 300px;
+        top: 350px;
         padding: 20px;
     }
 

@@ -27,6 +27,7 @@ const twitter = document.querySelector('.twitter');
 const aTwitter = document.getElementById('atwitter');
 const btnCopyToClipboard = document.querySelector('.clipIcon');
 const gameFinishedMsg = document.querySelector('.gameFinishedMsg');
+const faceBook = document.querySelector('.faceBook');
 
 const wrongMessage = document.querySelector('.wrongMessage');
 const pointsMessage = document.querySelector('.ptsMsg')
@@ -528,7 +529,7 @@ gameOverBtn.addEventListener('click', function() {
 twitter.addEventListener('mouseover', function() {
 
   
-  aTwitter.href = `https://twitter.com/intent/tweet?text=Level:%20${globalLevel+1},%20Points:%20${points},%20play%20flagle%20at%20www.flaglie.com`;
+  aTwitter.href = `https://twitter.com/intent/tweet?text=Level:%20${globalLevel+1},%20Points:%20${points},%20play%20Flaglie%20at%20www.flaglie.com`;
 
 });
 
@@ -568,6 +569,19 @@ xBtn.addEventListener('click', function() {
 
 });
 
+async function shareMenu() {
+  try {
+    await navigator.share({
+      text: `Level: ${globalLevel+1} Points: ${points}, play Flaglie at www.flaglie.com`,
+      url: 'www.flaglie.com'
+    })
+  } catch (error) {
+    console.log('Sharing failed!', error)
+  }
+}
+
+
+faceBook.addEventListener('click', shareMenu)
 
 
 //Auto complete code:
