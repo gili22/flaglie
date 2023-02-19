@@ -581,7 +581,7 @@ async function shareMenu() {
 }
 
 
-faceBook.addEventListener('click', shareMenu)
+faceBook.addEventListener('mouseover', shareMenu)
 
 
 //Auto complete code:
