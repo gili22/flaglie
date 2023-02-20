@@ -107,6 +107,11 @@ const srcs = [
     {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/1920px-Flag_of_Malaysia.svg.png', countryName: 'malaysia'},
     {url: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1920px-Flag_of_Germany.svg.png', countryName: 'germany'},
     {url: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1280px-Flag_of_Brazil.svg.png', countryName: 'brazil'},
+    {url: 'https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/1920px-Flag_of_Poland.svg.png', countryName: 'poland'},
+    {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_Cambodia.svg/1920px-Flag_of_Cambodia.svg.png', countryName: 'cambodia'},
+    {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1920px-Flag_of_the_People%27s_Republic_of_China.svg.png', countryName: 'china'},
+    {url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/1920px-Flag_of_Finland.svg.png', countryName: 'finland'},
+    {url: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1920px-Flag_of_India.svg.png', countryName: 'india'},
 
 
 
@@ -159,7 +164,7 @@ previousFlagIndexes.push(randomFlagIndex);
 
         previousFlagIndexes.push(randomFlagIndex);
 
-0
+
         flag.src=srcs[randomFlagIndex].url;
     
     }
@@ -526,7 +531,7 @@ gameOverBtn.addEventListener('click', function() {
 });
 
 
-twitter.addEventListener('mouseover', function() {
+twitter.addEventListener('click', function() {
 
   
   aTwitter.href = `https://twitter.com/intent/tweet?text=Level:%20${globalLevel+1},%20Points:%20${points},%20play%20Flaglie%20at%20www.flaglie.com`;
@@ -581,7 +586,7 @@ async function shareMenu() {
 }
 
 
-faceBook.addEventListener('mouseover', shareMenu)
+faceBook.addEventListener('click', shareMenu)
 
 
 //Auto complete code:
