@@ -577,8 +577,8 @@ xBtn.addEventListener('click', function() {
 async function shareMenu() {
   try {
     await navigator.share({
-      text: `Level: ${globalLevel+1} Points: ${points}, play Flaglie at www.flaglie.com`,
-      url: 'www.flaglie.com'
+      text: `Level: ${globalLevel+1} Points: ${points}, play Flaglie at `,
+      url: 'https://www.flaglie.com'
     })
   } catch (error) {
     console.log('Sharing failed!', error)
