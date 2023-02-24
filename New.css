@@ -73,13 +73,13 @@ body {
 
 .frame {
     position: absolute;
-    width: 1030px;
-    height: 600px;
+    width: 1010px;
+    height: 570px;
     box-shadow: 0px 5px 10px #303030;
 
     z-index: -5;
-    left: 379px;
-    bottom: 205px;
+    left: 385px;
+    bottom: 235px;
 }
 
 .box {
@@ -112,14 +112,13 @@ body {
 
 .goodJob {
     position: absolute;
-    left: 570px;
     top: 200px;
     color: white;
     font-size: 60px;
     z-index: 55;
    
 
-    left: 480px;
+    left: 465px;
     /* bottom: 200px; */
     opacity: 0;
     height: 100px;
@@ -143,10 +142,10 @@ body {
 
 .flag {
     position: absolute;
-    left: 450px;
-    bottom: 247px;
-    width: 887px;
-    height: 516px;
+    left: 455px;
+    bottom: 275px;
+    width: 870px;
+    height: 491px;
     z-index: -2;
 }
 
@@ -187,8 +186,8 @@ body {
 
 
     position: absolute;
-    left: 450px;
-    bottom: 247px;
+    left: 455px;
+    bottom: 275px;
     /* display: inline-grid;    */
     /* grid-template-rows: auto auto auto auto auto auto; 
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto; */
@@ -196,8 +195,8 @@ body {
     /* grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr); */
     grid-auto-flow: row; /*default value*/
-    width: 887px;
-    height: 516px;
+    width: 870px;
+    height: 491px;
 }
 
 /* .mapBackground {
@@ -601,12 +600,13 @@ body {
 
 .button {
     position: relative;
-    top: 770px;
+    height: 55px;
+    top: 795px;
     left: 790px;
     background-color: #fff;
     border: 0;
     outline: 0;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     font-size: 1.5rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 500;
@@ -629,7 +629,7 @@ body {
 
 
 .info {
-    position: relative;
+    position: absolute;
     width: 40px;
     height: 40px;
     font-size: 20px;
@@ -642,8 +642,8 @@ body {
     color: white;
 
     transition: all 0.2s;
-    left: 780px;
-    top: -5px;
+    left: 1080px;
+    top: 4px;
     z-index: 137;
 }
 
@@ -730,9 +730,95 @@ body {
     opacity: 0;
 }
 
+.hintImg {
+    position: relative;
+    top: -50px;
+    width: 450px;
+    height: 300px;
+    border-radius: 30px;
+    border: 5px solid rgb(209, 209, 209);
+}
 
+.hintMsg {
+    position: relative;
+    top: -50px;
+}
 
+.buyHint {
+    position: relative;
 
+    border: 0;
+    width: 150px;
+    height: 35px;
+    font-size: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    padding: 0.3rem;
+    border-radius: 5px;
+
+    left: 615px;
+    top: 730px;
+
+    z-index: 911;
+
+    color: white;
+    background-color: dodgerblue;
+    box-shadow: 0px 5px 10px dodgerblue;
+    transition: all 0.3s;
+    cursor: pointer;
+    border-radius: 5px;
+    border-bottom: 4px solid rgb(29, 120, 212);
+}
+
+.buyHint:hover {
+    box-shadow: 0px 15px 25px -5px rgb(36, 130, 224);
+    transform: scale(1.03);
+}
+
+.buyHint:active {
+    box-shadow: 0px 4px 8px #0065c8;
+    transform: scale(0.98);
+}
+
+.xhint {
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 800;
+    border: 0;
+
+    top: -15px;
+    left: 280px; 
+    border-radius: 30px;
+    z-index: 921;
+}
+
+.xhint:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.hint {
+    position: relative;
+
+    left: 600px;
+    top: 100px;
+
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    background-color: #171717d6;
+    width: 600px;
+    height: 500px;
+    padding-top: 10px;
+    border-radius: 30px;
+
+    z-index: 221;
+
+}
 
 
 .info:hover {
@@ -821,9 +907,36 @@ body {
    
 
     .info {
-        left: 80px;
+        left: 280px;
         top: 10px;
         padding-left: 14px;
+    }
+
+    .buyHint {
+        top: 55px;
+        left: -50px;
+    }
+
+    .hint {
+        position: absolute;
+        top: 210px;
+        left: 20px;
+        width: 350px;
+        height: 300px;
+    }
+
+    .hintMsg {
+        font-size: 30px;
+    }
+
+    .hintImg {
+        top: -50px;
+        width: 300px;
+        height: 200px;
+    }
+
+    .xhint {
+        left: 160px;
     }
 
     .desc {
@@ -870,7 +983,7 @@ body {
     .x {
         top: 0px;
         left: 348px;
-        width: 35px;
+        width: 30px;
         height: 35px;
         font-size: 20px;
         font-weight: 700;
@@ -984,8 +1097,8 @@ body {
 
     .allFBF {
         position: relative;
-        top: 682px;
-        left: -418px;
+        top: 710px;
+        left: -423px;
 
     }
 
@@ -999,6 +1112,8 @@ body {
 
 
     .boxes {
+
+        left: 454px;
         width: 328px;
         height: 200px;
 
@@ -1019,13 +1134,18 @@ body {
 
     }
 
+    .buyHint {
+        top: 550px;
+        left: -80px;
+    }
+
     .button {
         color: black;
         position: relative;
 
 
         left: 100px;
-        top: 590px;
+        top: 610px;
         left: 90px;
         width: 190px;
         height: 50px;
