@@ -39,7 +39,7 @@ const faceBook = document.querySelector('.faceBook');
 
 
 const wrongMessage = document.querySelector('.wrongMessage');
-const pointsMessage = document.querySelector('.ptsMsg')
+const pointsMessage = document.querySelector('.ptsMsg');
 
 
 
@@ -235,11 +235,18 @@ previousFlagIndexes.push(randomFlagIndex);
         points += 200;
 
         pointsMessage.textContent = `+${200}`
+
         pointsMessage.classList.toggle('fadeFX');
-        buyHintBtn.textContent = `Hint: ${200} points`
+
+
+        buyHintBtn.textContent = `Get Hint: ${200} points`
 
         
-        delay(800).then(() => pointsMessage.classList.toggle('fadeFX'));
+        delay(800).then(() => {
+          pointsMessage.classList.toggle('fadeFX');
+          pointsMessage.classList.color = 'rgb(25, 152, 20)';
+
+        });
 
         if(globalLevel !== 0) {
 
@@ -248,7 +255,7 @@ previousFlagIndexes.push(randomFlagIndex);
         pointsMessage.textContent = `+${200 + parseInt((currentBoxes / levels[globalLevel].blockNum) * 200)}`
         
         
-        buyHintBtn.textContent = `Hint: ${50 + parseInt((levels[globalLevel].blockNum) * 100)} points`
+        buyHintBtn.textContent = `Get Hint: ${50 + parseInt((levels[globalLevel].blockNum) * 100)} points`
 
         hintAmount = 50 + parseInt((levels[globalLevel].blockNum) * 100)
 
@@ -264,42 +271,42 @@ previousFlagIndexes.push(randomFlagIndex);
     // divBoxes.forEach(db => {
     //     db.classList.toggle('fade');
     //     db.style.background = colors[Math.floor(Math.random() * 6)];
-    //     delay(1000).then(() => db.style.background = 'rgb(43, 173, 225)');
+    //     delay(1000).then(() => db.style.background = '243, 173, 225)');
 
     // }); 
         
 
-        const animationDuration = 1500;
+    const animationDuration = 1500;
 
-        const frameDuration = 1000 / 60;
+    const frameDuration = 1000 / 60;
 
-        const totalFrames = Math.round( animationDuration / frameDuration );
+    const totalFrames = Math.round( animationDuration / frameDuration );
 
-        const easeOutQuad = t => t * ( 2 - t );
+    const easeOutQuad = t => t * ( 2 - t );
 
-        const animateCountUp = el => {
-            let frame = 40;
-            const countTo = points
+    const animateCountUp = el => {
+        let frame = 40;
+        const countTo = points
 
-            const counter = setInterval( () => {
-                frame++;
+        const counter = setInterval( () => {
+            frame++;
 
-                const progress = easeOutQuad( frame / totalFrames );
+            const progress = easeOutQuad( frame / totalFrames );
 
-                const currentCount = Math.round( countTo * progress );
+            const currentCount = Math.round( countTo * progress );
 
 
-                if (parseInt((currentBoxes / levels[globalLevel].blockNum) * 200) !== currentCount) {
-                    displayPoints.textContent = `Points: ` + currentCount;
-                }
+            if (parseInt((currentBoxes / levels[globalLevel].blockNum) * 200) !== currentCount) {
+                displayPoints.textContent = `Points: ` + currentCount;
+            }
 
-                if ( frame === totalFrames ) {
-                    clearInterval( counter );
-                }
-            }, frameDuration );
-        };
+            if ( frame === totalFrames ) {
+                clearInterval( counter );
+            }
+        }, frameDuration );
+    };
 
-          animateCountUp()
+      animateCountUp()
 
         
       
@@ -611,6 +618,11 @@ faceBook.addEventListener('click', shareMenu);
 
 buyHintBtn.addEventListener('click', function() {
 
+
+
+
+
+
   divelements = document.querySelectorAll("div.box");
   divBoxes = Array.from(divelements);
   hiddenBoxes = Array.from(divBoxes.filter(db => db.style.opacity == '0'));
@@ -619,26 +631,32 @@ buyHintBtn.addEventListener('click', function() {
 
   if(points - hintAmount >= 0 && hiddenBoxes.length > 0 || globalLevel===0) {
 
-    
+    pointsMessage.style.color = 'crimson';
+    pointsMessage.classList.toggle('fadeFX');
+    pointsMessage.textContent = `-${hintAmount}`
+ 
 
-    console.log(hiddenBoxes.length);
-    console.log(points, hintAmount);
+    delay(1000).then(() => {
+      pointsMessage.style.color = 'rgb(25, 152, 20)';
+    });
+
 
     points = points - hintAmount;
-
-
-
     displayPoints.textContent = `Points: ${points}`
 
-
+    buyHintBtn.disabled = true;
 
     xHint.classList.toggle('hidden');
     hintImg.classList.toggle('hidden');
     hintMsg.classList.toggle('hidden');
     hintDiv.classList.toggle('hidden');
 
+    delay(800).then(() => {
+      pointsMessage.classList.toggle('fadeFX');
+    });
+
 } else if(points - hintAmount < 0) {
-  wrongMessage.textContent = `you don't have enough points for a hint!`;
+  wrongMessage.textContent = `You don't have enough points for a hint!`;
   wrongMessage.classList.toggle('fade');
 
   delay(2500).then(() => {
@@ -667,6 +685,7 @@ xHint.addEventListener('click', function() {
   hintImg.classList.toggle('hidden');
   hintMsg.classList.toggle('hidden');
   hintDiv.classList.toggle('hidden');
+  buyHintBtn.disabled = false;
 
 });
 

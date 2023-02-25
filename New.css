@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Tilt+Neon&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 
 
@@ -748,7 +749,7 @@ body {
     position: relative;
 
     border: 0;
-    width: 150px;
+    width: 190px;
     height: 35px;
     font-size: 1rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -756,10 +757,10 @@ body {
     padding: 0.3rem;
     border-radius: 5px;
 
-    left: 615px;
+    left: 591px;
     top: 730px;
 
-    z-index: 911;
+    z-index: 1;
 
     color: white;
     background-color: dodgerblue;
@@ -860,7 +861,7 @@ body {
     left: 850px;
     top: -25px;
 
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Tilt Neon;
 
 }
 
@@ -907,15 +908,13 @@ body {
    
 
     .info {
-        left: 280px;
+        border: 2px solid white;
+        left: 320px;
         top: 10px;
         padding-left: 14px;
     }
 
-    .buyHint {
-        top: 55px;
-        left: -50px;
-    }
+   
 
     .hint {
         position: absolute;
@@ -965,14 +964,19 @@ body {
     }
 
     .textLogo {
-        top: -15px;
-        left: 100px;
+        background-color: #3d81c6;
+        width: 400px;
+        text-align: center;
+        top: -25px;
+        padding: 10px;
+        left: 0px;
     }
 
     .underline {
-        width: 320px;
-        top: 65px;
-        left: 35px;
+        width: 420px;
+        height: 5px;
+        top: 60px;
+        left: -20px;
     }
 
     .scoring {
@@ -1062,8 +1066,8 @@ body {
 
     .copyClipboard {
         left: 40px;
-        bottom: 100px;
-        z-index: 198;
+        bottom: 180px;
+        z-index: 101;
     }
     
     .goodJob {
@@ -1135,8 +1139,13 @@ body {
     }
 
     .buyHint {
-        top: 550px;
-        left: -80px;
+        width: 180px;
+        top: 555px;
+        left: -97px;
+        z-index: 2;
+
+        touch-action: manipulation;
+
     }
 
     .button {
@@ -1145,7 +1154,7 @@ body {
 
 
         left: 100px;
-        top: 610px;
+        top: 620px;
         left: 90px;
         width: 190px;
         height: 50px;
@@ -1156,6 +1165,7 @@ body {
 
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         touch-action: manipulation;
+        z-index: 1;
     }
 
     .lvlContainer {
@@ -1230,7 +1240,7 @@ body {
 
         opacity: 0;
         font-size: 25px;
-        left: 10px;
+        left: 20px;
         top: 350px;
         width: 350px;
         height: 90px;
