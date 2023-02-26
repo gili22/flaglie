@@ -198,6 +198,7 @@ body {
     font-size: 15px;
     background-color: transparent;
     border: 2px solid white;
+    text-decoration: none;
 
     transition: all 0.3s;
 
@@ -978,6 +979,7 @@ body {
 
     .xhint {
         left: 160px;
+        padding-right: 20px;
     }
 
     .desc {
@@ -1026,9 +1028,10 @@ body {
     }
 
     .secondDesc {
-        bottom: 520px;
-        left: 20px;
-        font-size: 20px;
+        bottom: 532px;
+        left: 28px;
+        font-size: 19px;
+        text-align: center;
     }
 
     .underline {
@@ -1046,9 +1049,9 @@ body {
     .x {
         top: 20px;
         left: 340px;
-        width: 35px;
-        height: 35px;
-        font-size: 20px;
+        width: 20px;
+        height: 20px;
+        font-size: 15px;
         font-weight: 700;
 
     }
