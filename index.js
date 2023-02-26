@@ -36,7 +36,7 @@ const aTwitter = document.getElementById('atwitter');
 const btnCopyToClipboard = document.querySelector('.clipIcon');
 const gameFinishedMsg = document.querySelector('.gameFinishedMsg');
 const faceBook = document.querySelector('.faceBook');
-
+const secondDesc = document.querySelector('.secondDesc');
 
 const wrongMessage = document.querySelector('.wrongMessage');
 const pointsMessage = document.querySelector('.ptsMsg');
@@ -586,6 +586,7 @@ info.addEventListener('click', function() {
   scoring.classList.toggle('hidden');
   xBtn.classList.toggle('hidden');
   howToPlay.classList.toggle('hidden');
+  secondDesc.classList.toggle('hidden');
   desc.classList.toggle('hidden');
 
 
@@ -597,6 +598,7 @@ xBtn.addEventListener('click', function() {
   scoring.classList.toggle('hidden');
   xBtn.classList.toggle('hidden');
   howToPlay.classList.toggle('hidden');
+  secondDesc.classList.toggle('hidden');
   desc.classList.toggle('hidden');
 
 

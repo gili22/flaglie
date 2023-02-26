@@ -719,7 +719,7 @@ body {
 }
 
 .secondDesc {
-    position: relative;
+    position: absolute;
     left: 740px;
     bottom: 690px;
     z-index: 93;
@@ -730,7 +730,7 @@ body {
 .howToPlay {
     position: relative;
 
-    bottom: 850px;
+    bottom: 730px;
     left: 800px;
     z-index: 94;
     font-size: 50px;
@@ -943,7 +943,7 @@ body {
         
         
         
-        height: 750px;
+        height: 700px;
 
     }
 
@@ -981,17 +981,17 @@ body {
     }
 
     .desc {
-        left: 0px;
-        top: -50px;
+        left: 5px;
+        top: -30px;
         width: 380px;
         text-align: left;
         line-height: 31.5px;
         font-size: 18px;
-        padding-top: 70px;
+        padding-top: 100px;
         height: 740px;
         padding-right: 30px;
         padding-left: 30px;
-        padding-bottom: 90px;
+        padding-bottom: 100px;
 
         border-radius: 15px;
 
@@ -1001,7 +1001,7 @@ body {
 
     .howToPlay {
         left: 75px;
-        bottom: 950px;
+        bottom: 907px;
         font-size: 40px;
     }
 
@@ -1018,27 +1018,33 @@ body {
 
     .textLogo {
         background-color: #3d81c6;
-        width: 400px;
+        width: 470px;
         text-align: center;
         top: -25px;
         padding: 10px;
-        left: 0px;
+        left: -25px;
+    }
+
+    .secondDesc {
+        bottom: 520px;
+        left: 20px;
+        font-size: 20px;
     }
 
     .underline {
-        width: 420px;
+        width: 470px;
         height: 5px;
         top: 60px;
         left: -20px;
     }
 
     .scoring {
-        left: 30px;
-        bottom: 420px;
+        left: 37px;
+        bottom: 417px;
     }
 
     .x {
-        top: 0px;
+        top: 20px;
         left: 340px;
         width: 35px;
         height: 35px;
