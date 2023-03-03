@@ -37,9 +37,14 @@ const btnCopyToClipboard = document.querySelector('.clipIcon');
 const gameFinishedMsg = document.querySelector('.gameFinishedMsg');
 const faceBook = document.querySelector('.faceBook');
 const secondDesc = document.querySelector('.secondDesc');
+const welcomeBtn = document.querySelector('.welcomeBtn');
+const startingDiv = document.querySelector('.startingDiv');
+
 
 const wrongMessage = document.querySelector('.wrongMessage');
 const pointsMessage = document.querySelector('.ptsMsg');
+
+
 
 
 
@@ -129,9 +134,58 @@ const srcs = [
   ];
 
 
+
+submitButton.disabled=true;
+button.disabled=true;
+buyHintBtn.disabled=true;
+info.disabled=true;
+
+buyHintBtn.disabled=true;
+
+
+
+const showModal = function() {
+  var is_already_show = sessionStorage.getItem('alreadyShow');
+  if(is_already_show != 'already shown'){
+    sessionStorage.setItem('alreadyShow','already shown');
+    startingDiv.classList.remove('hidden');
+    blurOverlay.classList.remove('hidden');
+  }else{
+    console.log(is_already_show);
+  }
+}
+
+showModal();
+
+
+
+welcomeBtn.addEventListener('click', function() {
+
+  submitButton.disabled=false;
+  button.disabled=false;
+  buyHintBtn.disabled=false;
+  info.disabled=false;
+
+  blurOverlay.classList.toggle('hidden');
+
+  welcomeBtn.classList.add('hidden');
+  startingDiv.classList.add('hidden');
+  document.querySelector('.welcomeDesc').classList.add('hidden');
+  // document.querySelector('body').style.backdropFilter = none;
+
+  // buyHintBtn.classList.add('hidden');
+  // info.classList.add('hidden');
+
+});
+
+
+
+
 let previousIds = [];
 
 let isActive = true;
+
+let purchase = false;
 
 
 // const resizeOps = () => {
@@ -255,9 +309,9 @@ previousFlagIndexes.push(randomFlagIndex);
         pointsMessage.textContent = `+${200 + parseInt((currentBoxes / levels[globalLevel].blockNum) * 200)}`
         
         
-        buyHintBtn.textContent = `Get Hint: ${50 + parseInt((levels[globalLevel].blockNum) * 100)} points`
+        buyHintBtn.textContent = `Get Hint: ${50 + parseInt((levels[globalLevel].blockNum) * 75)} points`
 
-        hintAmount = 50 + parseInt((levels[globalLevel].blockNum) * 100)
+        hintAmount = 50 + parseInt((levels[globalLevel].blockNum) * 75)
 
 
         delay().then(() => pointsMessage.classList.toggle('fadeFX'));
@@ -341,6 +395,7 @@ previousFlagIndexes.push(randomFlagIndex);
         goodJob.textContent = `${compliments[Math.floor(Math.random() * 4)]} on to level ${globalLevel+1}!`
         goodJob.classList.toggle('fade');
 
+        purchase=false;
       
         submitButton.disabled = true;
         input.disabled = true;
@@ -489,6 +544,9 @@ submitButton.addEventListener("click", function (e) {
 button.addEventListener('click', function() {
   if(isActive === true) {
 
+    buyHintBtn.disabled=false;
+
+
     divelements = document.querySelectorAll("div.box");
     divBoxes = Array.from(divelements);
     let hiddenBoxes = Array.from(divBoxes.filter(db => db.style.opacity == '0'));
@@ -618,10 +676,12 @@ async function shareMenu() {
 faceBook.addEventListener('click', shareMenu);
 
 
+
 buyHintBtn.addEventListener('click', function() {
 
+  if(purchase === false) {
 
-
+  purchase=true;
 
 
 
@@ -672,11 +732,32 @@ buyHintBtn.addEventListener('click', function() {
   wrongMessage.textContent = `Please reveal at least 1 block before buying a hint!`;
   wrongMessage.classList.toggle('fade');
 
+  purchase=false;
+
   delay(2500).then(() => {
     wrongMessage.classList.toggle('fade');
 
   });
 
+}
+
+} else if(points-hintAmount < 0) {
+  wrongMessage.textContent = `You don't have enough points for a hint!`;
+  wrongMessage.classList.toggle('fade');
+
+  delay(2500).then(() => {
+    wrongMessage.classList.toggle('fade');
+
+  });
+
+} else if(purchase !== false) {
+  wrongMessage.textContent = `You can use only one hint per level`;
+  wrongMessage.classList.toggle('fade');
+
+  delay(2500).then(() => {
+    wrongMessage.classList.toggle('fade');
+
+  });
 }
 
 });
