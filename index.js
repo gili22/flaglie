@@ -729,7 +729,7 @@ buyHintBtn.addEventListener('click', function() {
 
 } else if(hiddenBoxes.length === 0 && globalLevel > 0) {
 
-  wrongMessage.textContent = `Please reveal at least 1 block before buying a hint!`;
+  wrongMessage.textContent = `Please remove at least 1 block before buying a hint!`;
   wrongMessage.classList.toggle('fade');
 
   purchase=false;
