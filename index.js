@@ -134,7 +134,6 @@ const srcs = [
   ];
 
 
-
 submitButton.disabled=true;
 button.disabled=true;
 buyHintBtn.disabled=true;
