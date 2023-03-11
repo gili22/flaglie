@@ -468,7 +468,7 @@ previousFlagIndexes.push(randomFlagIndex);
         previousIds=[]
     }); 
 
-    } else if(enterEvent && input.value.toLowerCase() !== srcs[randomFlagIndex].countryName && input.value.length > 0 || enterEvent && randomFlagIndex===52 && input.value.toLowerCase() !== 'türkiye' && input.value.toLowerCase() === 'türkiye') {
+    } else if(enterEvent && input.value.toLowerCase() !== srcs[randomFlagIndex].countryName && input.value.length > 0 || enterEvent && randomFlagIndex===52 && input.value.toLowerCase() !== 'türkiye' && input.value.toLowerCase() === 'turkey') {
         attemptedGuesses--;
 
 
