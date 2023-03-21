@@ -187,12 +187,7 @@ let isActive = true;
 let purchase = false;
 
 
-// const resizeOps = () => {
-//   document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
-// };
 
-// resizeOps();
-// window.addEventListener("resize", resizeOps);
 
     
 
@@ -200,10 +195,7 @@ let purchase = false;
 let previousFlagIndexes = [];
 
 let globalLevel = 0;
-// for(let i = 0; i < levels[globalLevel].blockNum; i++) {
-//     let html = `<div class="box${i} box" id="${i}"></div>`
-//     boxes.insertAdjacentHTML('beforeend', html);   
-// }
+
 
 
 
