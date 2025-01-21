@@ -31,7 +31,7 @@ const gameFinishedMsg = document.querySelector('.gameFinishedMsg');
 const wrongMessage = document.querySelector('.wrongMessage');
 const pointsMessage = document.querySelector('.ptsMsg')
 
-
+//GG
 
 const levels = [
     {blockNum: 1, column: 1, row: 1},
